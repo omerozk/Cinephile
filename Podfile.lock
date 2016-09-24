@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.0.0)
+  - p2.OAuth2 (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - p2.OAuth2 (from `https://github.com/p2/OAuth2`)
+
+EXTERNAL SOURCES:
+  p2.OAuth2:
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  p2.OAuth2:
+    :commit: 4bc23039782b6958482376cc7df6897f1e895645
+    :git: https://github.com/p2/OAuth2
+    :submodules: true
+
+SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  p2.OAuth2: a8f96ecad6a46189b9b193691fea401139e43491
+
+PODFILE CHECKSUM: 3cee30979300b7ac66e41ef92bd2180ba629e1fa
+
+COCOAPODS: 1.0.1
