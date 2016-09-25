@@ -40,7 +40,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
+        
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
 
+        NSLog("url " + "\(url)" + "\n")
+        NSLog("options " + "\(options)" + "\n")
 
+        // you should probably first check if this is the callback being opened
+        if url.host == "authorize" {
+            // if your oauth2 instance lives somewhere else, adapt accordingly
+            Auth2Api.sharedInstance.oauth2Instance.handleRedirectURL(url)
+        }
+
+        return true
+    }
 }
-
