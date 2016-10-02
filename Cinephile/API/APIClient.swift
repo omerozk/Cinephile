@@ -17,7 +17,7 @@ class APIClient: SessionManager {
         return apiClient
     }()
 
-    @discardableResult func doRequest(method: HTTPMethod, urlPath: String,  parameters: [String : AnyObject]? = nil, successBlock: @escaping (Any) -> Void, failureBlock: @escaping (NSError) -> Void) -> Alamofire.Request? {
+    @discardableResult func doRequest(method: HTTPMethod, urlPath: String,  parameters: [String : AnyObject]? = nil, successBlock: @escaping (JSON) -> Void, failureBlock: @escaping (NSError) -> Void) -> Alamofire.Request? {
         let encoding: ParameterEncoding = JSONEncoding.default
         let header = getDefaultHeader()
         
@@ -27,13 +27,13 @@ class APIClient: SessionManager {
             // sometimes, server returns nothing when the response success.
             if let data = response.data, let statusCode = response.response?.statusCode, data.count == 0 && statusCode < 400 {
                 dlog(message: "\(urlPath) Success without response")
-                successBlock(jsonResponse: JSON(""))
+                successBlock(JSON(""))
                 return
             }
             switch response.result {
             case .success(let successValue):
                 dlog(message: "\(urlPath) Success with \(successValue)")
-                successBlock(jsonResponse: JSON(data: response.data!))
+                successBlock(JSON(data: response.data!))
                 return
             case .failure(let error):
                 dlog(message: "\(urlPath) Failure \(request)")

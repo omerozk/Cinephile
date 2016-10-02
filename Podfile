@@ -10,6 +10,7 @@ pod 'Alamofire', '~> 4.0'
 pod 'p2.OAuth2', :git => 'https://github.com/p2/OAuth2', :submodules => true
 pod 'SwiftyJSON', '3.0.0'
 pod 'R.swift', '~> 3.0.0'
+pod 'Kingfisher', '~> 3.0'
 
 end
 

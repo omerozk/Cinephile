@@ -8,45 +8,88 @@
         <!--Movies View Controller-->
         <scene sceneID="MMN-Ff-yqQ">
             <objects>
-                <viewController storyboardIdentifier="MoviesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UTA-SC-7Bg" customClass="MoviesViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviesVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UTA-SC-7Bg" customClass="MoviesViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5qg-rw-6Ky"/>
                         <viewControllerLayoutGuide type="bottom" id="h2N-tE-1nZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ikc-cA-iQE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tGo-4n-FOw">
-                                <textInputTraits key="textInputTraits"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="koa-HO-QJZ">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PS6-91-cef">
+                                    <size key="itemSize" width="100" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3qd-ks-dZz">
+                                        <rect key="frame" x="0.0" y="10" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oKO-tJ-ZTW">
+                                        <rect key="frame" x="138" y="10" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5G9-e7-v3T">
+                                        <rect key="frame" x="275" y="10" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4HF-b6-rjS">
+                                        <rect key="frame" x="0.0" y="170" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="W7c-Wg-Wfl">
+                                        <rect key="frame" x="138" y="170" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
                                 <connections>
-                                    <outlet property="delegate" destination="UTA-SC-7Bg" id="3Jx-la-PPE"/>
+                                    <outlet property="dataSource" destination="UTA-SC-7Bg" id="zQ5-M1-3Xn"/>
+                                    <outlet property="delegate" destination="UTA-SC-7Bg" id="dbe-UK-0r7"/>
                                 </connections>
-                            </searchBar>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tGo-4n-FOw" secondAttribute="trailing" id="6hp-0R-Ujv"/>
-                            <constraint firstItem="tGo-4n-FOw" firstAttribute="leading" secondItem="ikc-cA-iQE" secondAttribute="leading" id="V3w-ok-diw"/>
-                            <constraint firstItem="tGo-4n-FOw" firstAttribute="top" secondItem="5qg-rw-6Ky" secondAttribute="bottom" id="Xrb-Mo-m3D"/>
+                            <constraint firstItem="koa-HO-QJZ" firstAttribute="leading" secondItem="ikc-cA-iQE" secondAttribute="leading" id="KYd-Pn-pos"/>
+                            <constraint firstItem="h2N-tE-1nZ" firstAttribute="top" secondItem="koa-HO-QJZ" secondAttribute="bottom" id="Z4F-Fh-Xnq"/>
+                            <constraint firstItem="koa-HO-QJZ" firstAttribute="top" secondItem="5qg-rw-6Ky" secondAttribute="bottom" id="c6R-Ij-9lg"/>
+                            <constraint firstAttribute="trailing" secondItem="koa-HO-QJZ" secondAttribute="trailing" id="nqw-lI-x5M"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="ItD-bL-G7U" id="xSB-jr-zyL"/>
+                        <outlet property="movieCollectionView" destination="koa-HO-QJZ" id="9xQ-4C-k1i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2o-d9-d2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="ItD-bL-G7U">
-                    <connections>
-                        <outlet property="delegate" destination="UTA-SC-7Bg" id="mzF-RU-RmT"/>
-                        <outlet property="searchBar" destination="tGo-4n-FOw" id="7nM-9a-3Y3"/>
-                        <outlet property="searchContentsController" destination="UTA-SC-7Bg" id="Okd-Mb-FGW"/>
-                        <outlet property="searchResultsDataSource" destination="UTA-SC-7Bg" id="jLF-ac-uhA"/>
-                        <outlet property="searchResultsDelegate" destination="UTA-SC-7Bg" id="Xwk-Zv-ab5"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="174" y="163"/>
+            <point key="canvasLocation" x="173.59999999999999" y="162.3688155922039"/>
         </scene>
     </scenes>
 </document>

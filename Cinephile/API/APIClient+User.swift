@@ -22,7 +22,7 @@ extension APIClient {
         return doRequest(method: .get, urlPath: kUserInfoUrlKey, successBlock: { (jsonResponse) in
             
             // update user if exist
-            UserManager.sharedInstance.user = User(json: jsonResponse as! JSON)
+            UserManager.sharedInstance.user = User(json: jsonResponse)
             successBlock?(UserManager.sharedInstance.user!)
             
             }, failureBlock: { (error) in

@@ -22,3 +22,5 @@ let kUserInfoUrlKey: String = "users/me"
 let kOAuthAuthroizeUrlKey: String = "oauth/authorize"
 let kOAuthTokenUrlKey: String = "oauth/token"
 let kOAuthRevokeTokenUrlKey: String = "oauth/revoke"
+
+let kBoxOfficeMoviesUrlKey: String = "movies/boxoffice"
