@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="leT-w9-r9N">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Gkl-8Q-7t8">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y4O-hM-X4e" customClass="LoginViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Azx-Cz-SFv"/>
+                        <viewControllerLayoutGuide type="bottom" id="gdZ-Lu-sjB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X08-SN-viS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ft-hI-Ccb">
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.10980392160000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bl5-63-WvU"/>
+                                    <constraint firstAttribute="width" constant="200" id="mNv-YT-usF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Login to trakt.tv">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginAction:" destination="Y4O-hM-X4e" eventType="touchUpInside" id="65i-6j-Tup"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="traktTvLogo" translatesAutoresizingMaskIntoConstraints="NO" id="it0-Zi-CKi"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Cinephile!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6f-pb-xSc">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="gdZ-Lu-sjB" firstAttribute="top" secondItem="6ft-hI-Ccb" secondAttribute="bottom" constant="40" id="5DA-BI-9Mo"/>
+                            <constraint firstAttribute="trailing" secondItem="y6f-pb-xSc" secondAttribute="trailing" constant="10" id="N1I-Ef-VRb"/>
+                            <constraint firstItem="y6f-pb-xSc" firstAttribute="leading" secondItem="X08-SN-viS" secondAttribute="leading" constant="10" id="PG6-AF-wml"/>
+                            <constraint firstItem="it0-Zi-CKi" firstAttribute="top" secondItem="Azx-Cz-SFv" secondAttribute="bottom" constant="20" id="SaH-jy-yl9"/>
+                            <constraint firstItem="y6f-pb-xSc" firstAttribute="top" secondItem="it0-Zi-CKi" secondAttribute="bottom" constant="20" id="U0B-vD-mzw"/>
+                            <constraint firstItem="it0-Zi-CKi" firstAttribute="centerX" secondItem="X08-SN-viS" secondAttribute="centerX" id="Ws5-CC-4jw"/>
+                            <constraint firstItem="6ft-hI-Ccb" firstAttribute="centerX" secondItem="X08-SN-viS" secondAttribute="centerX" id="Z2T-uL-9BM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m6l-oy-JNb"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qhv-hK-ITT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.80000000000001" y="-205.54722638680661"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qfc-sc-2kh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="leT-w9-r9N" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FkU-wg-jLy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y4O-hM-X4e" kind="relationship" relationship="rootViewController" id="Kyu-F0-6UK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViR-sn-goE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538.39999999999998" y="-205.54722638680661"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="traktTvLogo" width="100" height="100"/>
+    </resources>
+</document>

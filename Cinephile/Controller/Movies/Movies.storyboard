@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies View Controller-->
+        <scene sceneID="MMN-Ff-yqQ">
+            <objects>
+                <viewController storyboardIdentifier="MoviesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UTA-SC-7Bg" customClass="MoviesViewController" customModule="Cinephile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5qg-rw-6Ky"/>
+                        <viewControllerLayoutGuide type="bottom" id="h2N-tE-1nZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ikc-cA-iQE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tGo-4n-FOw">
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UTA-SC-7Bg" id="3Jx-la-PPE"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tGo-4n-FOw" secondAttribute="trailing" id="6hp-0R-Ujv"/>
+                            <constraint firstItem="tGo-4n-FOw" firstAttribute="leading" secondItem="ikc-cA-iQE" secondAttribute="leading" id="V3w-ok-diw"/>
+                            <constraint firstItem="tGo-4n-FOw" firstAttribute="top" secondItem="5qg-rw-6Ky" secondAttribute="bottom" id="Xrb-Mo-m3D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="ItD-bL-G7U" id="xSB-jr-zyL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2o-d9-d2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="ItD-bL-G7U">
+                    <connections>
+                        <outlet property="delegate" destination="UTA-SC-7Bg" id="mzF-RU-RmT"/>
+                        <outlet property="searchBar" destination="tGo-4n-FOw" id="7nM-9a-3Y3"/>
+                        <outlet property="searchContentsController" destination="UTA-SC-7Bg" id="Okd-Mb-FGW"/>
+                        <outlet property="searchResultsDataSource" destination="UTA-SC-7Bg" id="jLF-ac-uhA"/>
+                        <outlet property="searchResultsDelegate" destination="UTA-SC-7Bg" id="Xwk-Zv-ab5"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="174" y="163"/>
+        </scene>
+    </scenes>
+</document>

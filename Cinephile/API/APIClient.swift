@@ -23,7 +23,7 @@ class APIClient: SessionManager {
         
         let request = self.request(baseUrl + urlPath, method: method, parameters: parameters, encoding: encoding, headers: header)
 
-        request.responseJSON { (response) in
+        request.validate(statusCode: 200..<400).responseJSON { (response) in
             // sometimes, server returns nothing when the response success.
             if let data = response.data, let statusCode = response.response?.statusCode, data.count == 0 && statusCode < 400 {
                 dlog(message: "\(urlPath) Success without response")
@@ -32,36 +32,15 @@ class APIClient: SessionManager {
             }
             switch response.result {
             case .success(let successValue):
-                dlog(message: "\(urlPath) SuccessValue : \(successValue)")
-                guard let statusCode = response.response?.statusCode else {
-                    failureBlock(NSError())
-                    return
-                }
-
-                guard statusCode >= 400 else {
-                    dlog(message: "\(urlPath) Success with \(statusCode)")
-                    successBlock(jsonResponse: JSON(data: response.data!))
-                    return
-                }
-
-                guard statusCode == 401 else {
-                    dlog(message: "\(urlPath) Failure In success block (old API): \(statusCode) \(JSON(data: response.data!))")
-                    failureBlock(NSError())
-                    return
-                }
-
-                // manage refresh token when expired
-                dlog(message: "\(urlPath) Failure In success because token expired: \(statusCode) \(JSON(data: response.data!))")
-                self.retrier?.should(self, retry: request, with: NSError(), completion: { (shouldRetry, time) in
-                    if (shouldRetry) {
-                        self.doRequest(method: method, urlPath: baseUrl + urlPath, parameters: parameters, successBlock: successBlock, failureBlock: failureBlock)
-                    } else {
-                        failureBlock(NSError())
-                    }
-                })
-                
+                dlog(message: "\(urlPath) Success with \(successValue)")
+                successBlock(jsonResponse: JSON(data: response.data!))
+                return
             case .failure(let error):
                 dlog(message: "\(urlPath) Failure \(request)")
+
+                if error.asOAuth2Error._code == NSURLErrorNotConnectedToInternet || error.asOAuth2Error._code == NSURLErrorTimedOut {
+                    // TODO: display no internet popup
+                }
                 guard let statusCode = response.response?.statusCode else {
                     failureBlock(NSError())
                     dlog(message: "\(response)")
@@ -69,14 +48,6 @@ class APIClient: SessionManager {
                 }
 
                 guard statusCode == 401 else {
-                    // success
-                    if (statusCode < 400) {
-                        dlog(message: "\(urlPath) Success in failure block because no data returned \(statusCode)")
-                        successBlock(jsonResponse: JSON(nilLiteral: ()))
-                        return
-                    }
-                    
-                    // error
                     failureBlock(NSError())
                     return
                 }

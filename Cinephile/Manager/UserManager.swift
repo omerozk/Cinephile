@@ -16,7 +16,7 @@ class UserManager: NSObject {
 
     var isLoggedIn: Bool {
         
-        if let token = Auth2Api.sharedInstance.oauth2Instance.accessToken {
+        if let token = Auth2Api.sharedInstance.getAccessToken() {
             if token.isEmpty == false {
                 return true
             }

@@ -16,6 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Nav bar
+        // remove bottom shadow under navbar
+        
+        UINavigationBar.appearance().backgroundColor = UIColor.brown
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backIndicatorImage = R.image.back()
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = R.image.back()
+        UINavigationBar.appearance().barStyle = .black
+            
+        // set nav bar color and text attribute
+        UINavigationBar.appearance().tintColor = UIColor.white
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName:  UIFont. avenirNextLTProDemi(18)]
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName: UIFont.avenirNextLTProDemi(14)], forState: .Normal)
+
+        // if user already login display Merchant controller
+        if UserManager.sharedInstance.isLoggedIn {
+            if let navigationController = self.window?.rootViewController as? UINavigationController {
+                APIClient.sharedInstance.authorizeUser()
+                navigationController.setViewControllers([R.storyboard.rootTabBar.rootTabBarVC()!], animated: false)
+            }
+        }
+
+        
         return true
     }
 
@@ -57,5 +81,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return true
+    }
+    
+    /**
+     pop to root view controller which is Login
+     */
+    class func backToLoginVC() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        if let navigationController = appDelegate.window?.rootViewController as? UINavigationController {
+            
+            // if login is the rootController no need to go back it means that user is not logged
+            if navigationController.viewControllers[0] is RootTabBarViewController {
+                let loginVC = R.storyboard.authentication.loginVC()
+                
+                if let presentedVC = navigationController.presentedViewController {
+                    // if a view is presented dismiss it before to pop to root controller
+                    presentedVC.dismiss(animated: true, completion: { 
+                        navigationController.setViewControllers([loginVC!], animated: true)
+                    })
+                }else {
+                    navigationController.setViewControllers([loginVC!], animated: true)
+                }
+            }
+        }
     }
 }

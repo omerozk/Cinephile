@@ -57,16 +57,21 @@ class Auth2Api {
     }
 
     
-    func authorizeUser() -> Void {
+    func authorizeUser(successBlock: ((Void) -> Void)? = nil,
+                       failureBlock: ((_ error: NSError) -> Void)? = nil) -> Void {
         let oauth2 = self.oauth2Instance
 
         oauth2.authorize { (response, error) in
+            if (error != nil) {
+                failureBlock?(NSError())
+                return
+            }
+            
             let sessionManager = APIClient.sharedInstance
             let retrier = OAuth2RetryHandler(oauth2: oauth2)
             sessionManager.adapter = retrier
             sessionManager.retrier = retrier
-            
-            sessionManager.getUserDetails()
+            successBlock?()
         }
     }
     

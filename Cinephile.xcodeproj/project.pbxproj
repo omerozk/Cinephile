@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		47C0FEA01D9710CC005C6955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0FE9F1D9710CC005C6955 /* AppDelegate.swift */; };
-		47C0FEA51D9710CC005C6955 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C0FEA31D9710CC005C6955 /* Main.storyboard */; };
-		47C0FEA71D9710CC005C6955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47C0FEA61D9710CC005C6955 /* Assets.xcassets */; };
 		47C0FEAA1D9710CC005C6955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C0FEA81D9710CC005C6955 /* LaunchScreen.storyboard */; };
 		47C0FEB51D9714C9005C6955 /* Auth2Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0FEB41D9714C9005C6955 /* Auth2Api.swift */; };
-		47C0FEB71D97294B005C6955 /* CommonWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C0FEB61D97294B005C6955 /* CommonWebViewController.swift */; };
+		47D51C2B1DA13FAF002B675D /* CommonWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C2A1DA13FAF002B675D /* CommonWebViewController.swift */; };
+		47D51C2D1DA13FBA002B675D /* Common.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D51C2C1DA13FBA002B675D /* Common.storyboard */; };
+		47D51C301DA14030002B675D /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C2F1DA14030002B675D /* RootTabBarViewController.swift */; };
+		47D51C331DA1443E002B675D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C321DA1443E002B675D /* R.generated.swift */; };
+		47D51C371DA146CB002B675D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C361DA146CB002B675D /* LoginViewController.swift */; };
+		47D51C391DA146FD002B675D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C381DA146FD002B675D /* AccountViewController.swift */; };
+		47D51C3B1DA14707002B675D /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D51C3A1DA14707002B675D /* Account.storyboard */; };
+		47D51C3E1DA1495A002B675D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D51C3D1DA1495A002B675D /* Assets.xcassets */; };
+		47D51C401DA14BAD002B675D /* RootTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D51C3F1DA14BAD002B675D /* RootTabBar.storyboard */; };
+		47D51C431DA150A6002B675D /* UIColor+enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C421DA150A6002B675D /* UIColor+enhanced.swift */; };
+		47D51C451DA1536A002B675D /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D51C441DA1536A002B675D /* Authentication.storyboard */; };
+		47D51C491DA15604002B675D /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D51C481DA15604002B675D /* Movies.storyboard */; };
+		47D51C4B1DA156B8002B675D /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D51C4A1DA156B8002B675D /* MoviesViewController.swift */; };
 		47EE5CEC1D97F24800BCABFE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE5CEB1D97F24800BCABFE /* Constant.swift */; };
-		47EE5CEE1D97FD6900BCABFE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE5CED1D97FD6900BCABFE /* LoginViewController.swift */; };
 		47EE5CF01D9800E000BCABFE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE5CEF1D9800E000BCABFE /* APIClient.swift */; };
 		47EE5CF21D98075A00BCABFE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE5CF11D98075A00BCABFE /* Utils.swift */; };
 		47EE5CF41D980AEE00BCABFE /* APIClient+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EE5CF31D980AEE00BCABFE /* APIClient+User.swift */; };
@@ -26,14 +35,23 @@
 /* Begin PBXFileReference section */
 		47C0FE9C1D9710CC005C6955 /* Cinephile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinephile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C0FE9F1D9710CC005C6955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47C0FEA41D9710CC005C6955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		47C0FEA61D9710CC005C6955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47C0FEA91D9710CC005C6955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47C0FEAB1D9710CC005C6955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47C0FEB41D9714C9005C6955 /* Auth2Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth2Api.swift; sourceTree = "<group>"; };
-		47C0FEB61D97294B005C6955 /* CommonWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonWebViewController.swift; sourceTree = "<group>"; };
+		47D51C2A1DA13FAF002B675D /* CommonWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonWebViewController.swift; sourceTree = "<group>"; };
+		47D51C2C1DA13FBA002B675D /* Common.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Common.storyboard; sourceTree = "<group>"; };
+		47D51C2F1DA14030002B675D /* RootTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
+		47D51C321DA1443E002B675D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		47D51C361DA146CB002B675D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		47D51C381DA146FD002B675D /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		47D51C3A1DA14707002B675D /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		47D51C3D1DA1495A002B675D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47D51C3F1DA14BAD002B675D /* RootTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RootTabBar.storyboard; sourceTree = "<group>"; };
+		47D51C421DA150A6002B675D /* UIColor+enhanced.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+enhanced.swift"; sourceTree = "<group>"; };
+		47D51C441DA1536A002B675D /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		47D51C481DA15604002B675D /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movies.storyboard; sourceTree = "<group>"; };
+		47D51C4A1DA156B8002B675D /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		47EE5CEB1D97F24800BCABFE /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		47EE5CED1D97FD6900BCABFE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		47EE5CEF1D9800E000BCABFE /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		47EE5CF11D98075A00BCABFE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		47EE5CF31D980AEE00BCABFE /* APIClient+User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIClient+User.swift"; sourceTree = "<group>"; };
@@ -90,13 +108,14 @@
 				47C0FEB21D9714B5005C6955 /* Controller */,
 				47EE5CF71D980C6C00BCABFE /* Manager */,
 				47C0FEB31D9714B5005C6955 /* Model */,
+				47D51C411DA15068002B675D /* Extension */,
+				47D51C3C1DA14940002B675D /* Ressources */,
 				47C0FE9F1D9710CC005C6955 /* AppDelegate.swift */,
-				47C0FEA31D9710CC005C6955 /* Main.storyboard */,
-				47C0FEA61D9710CC005C6955 /* Assets.xcassets */,
 				47C0FEA81D9710CC005C6955 /* LaunchScreen.storyboard */,
 				47C0FEAB1D9710CC005C6955 /* Info.plist */,
 				47EE5CEB1D97F24800BCABFE /* Constant.swift */,
 				47EE5CF11D98075A00BCABFE /* Utils.swift */,
+				47D51C321DA1443E002B675D /* R.generated.swift */,
 			);
 			path = Cinephile;
 			sourceTree = "<group>";
@@ -114,8 +133,12 @@
 		47C0FEB21D9714B5005C6955 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				47C0FEB61D97294B005C6955 /* CommonWebViewController.swift */,
-				47EE5CED1D97FD6900BCABFE /* LoginViewController.swift */,
+				47D51C341DA146B1002B675D /* Account */,
+				47D51C351DA146B1002B675D /* Authentication */,
+				47D51C461DA155F1002B675D /* Movies */,
+				47D51C2E1DA14007002B675D /* Navigation */,
+				47D51C471DA155F1002B675D /* TVShows */,
+				47D51C291DA13FA3002B675D /* Common */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +149,74 @@
 				47EE5CF51D980BE000BCABFE /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		47D51C291DA13FA3002B675D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C2A1DA13FAF002B675D /* CommonWebViewController.swift */,
+				47D51C2C1DA13FBA002B675D /* Common.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		47D51C2E1DA14007002B675D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C2F1DA14030002B675D /* RootTabBarViewController.swift */,
+				47D51C3F1DA14BAD002B675D /* RootTabBar.storyboard */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		47D51C341DA146B1002B675D /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C381DA146FD002B675D /* AccountViewController.swift */,
+				47D51C3A1DA14707002B675D /* Account.storyboard */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		47D51C351DA146B1002B675D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C361DA146CB002B675D /* LoginViewController.swift */,
+				47D51C441DA1536A002B675D /* Authentication.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		47D51C3C1DA14940002B675D /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C3D1DA1495A002B675D /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		47D51C411DA15068002B675D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C421DA150A6002B675D /* UIColor+enhanced.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		47D51C461DA155F1002B675D /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				47D51C4A1DA156B8002B675D /* MoviesViewController.swift */,
+				47D51C481DA15604002B675D /* Movies.storyboard */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		47D51C471DA155F1002B675D /* TVShows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TVShows;
 			sourceTree = "<group>";
 		};
 		47EE5CF71D980C6C00BCABFE /* Manager */ = {
@@ -152,6 +243,7 @@
 			buildConfigurationList = 47C0FEAE1D9710CC005C6955 /* Build configuration list for PBXNativeTarget "Cinephile" */;
 			buildPhases = (
 				37B5F67BD1E6686BFBD7CCC6 /* [CP] Check Pods Manifest.lock */,
+				47D51C311DA143EE002B675D /* R.Swift Run Script */,
 				47C0FE981D9710CC005C6955 /* Sources */,
 				47C0FE991D9710CC005C6955 /* Frameworks */,
 				47C0FE9A1D9710CC005C6955 /* Resources */,
@@ -206,9 +298,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D51C401DA14BAD002B675D /* RootTabBar.storyboard in Resources */,
+				47D51C451DA1536A002B675D /* Authentication.storyboard in Resources */,
 				47C0FEAA1D9710CC005C6955 /* LaunchScreen.storyboard in Resources */,
-				47C0FEA71D9710CC005C6955 /* Assets.xcassets in Resources */,
-				47C0FEA51D9710CC005C6955 /* Main.storyboard in Resources */,
+				47D51C2D1DA13FBA002B675D /* Common.storyboard in Resources */,
+				47D51C3B1DA14707002B675D /* Account.storyboard in Resources */,
+				47D51C491DA15604002B675D /* Movies.storyboard in Resources */,
+				47D51C3E1DA1495A002B675D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +323,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		47D51C311DA143EE002B675D /* R.Swift Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "R.Swift Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"\n";
 		};
 		B1E999647614A8786A8F77B9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -267,30 +377,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47EE5CEE1D97FD6900BCABFE /* LoginViewController.swift in Sources */,
+				47D51C371DA146CB002B675D /* LoginViewController.swift in Sources */,
 				47C0FEB51D9714C9005C6955 /* Auth2Api.swift in Sources */,
+				47D51C391DA146FD002B675D /* AccountViewController.swift in Sources */,
 				47EE5CF41D980AEE00BCABFE /* APIClient+User.swift in Sources */,
 				47EE5CEC1D97F24800BCABFE /* Constant.swift in Sources */,
 				47EE5CF21D98075A00BCABFE /* Utils.swift in Sources */,
 				47EE5CF61D980BE000BCABFE /* User.swift in Sources */,
-				47C0FEB71D97294B005C6955 /* CommonWebViewController.swift in Sources */,
+				47D51C431DA150A6002B675D /* UIColor+enhanced.swift in Sources */,
 				47C0FEA01D9710CC005C6955 /* AppDelegate.swift in Sources */,
 				47EE5CF91D980C7500BCABFE /* UserManager.swift in Sources */,
+				47D51C2B1DA13FAF002B675D /* CommonWebViewController.swift in Sources */,
+				47D51C4B1DA156B8002B675D /* MoviesViewController.swift in Sources */,
+				47D51C301DA14030002B675D /* RootTabBarViewController.swift in Sources */,
 				47EE5CF01D9800E000BCABFE /* APIClient.swift in Sources */,
+				47D51C331DA1443E002B675D /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		47C0FEA31D9710CC005C6955 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47C0FEA41D9710CC005C6955 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		47C0FEA81D9710CC005C6955 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

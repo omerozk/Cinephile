@@ -1,11 +1,15 @@
 PODS:
   - Alamofire (4.0.1)
   - p2.OAuth2 (3.0.0)
+  - R.swift (3.0.0):
+    - R.swift.Library (~> 3.0.0)
+  - R.swift.Library (3.0.1)
   - SwiftyJSON (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - p2.OAuth2 (from `https://github.com/p2/OAuth2`)
+  - R.swift (~> 3.0.0)
   - SwiftyJSON (= 3.0.0)
 
 EXTERNAL SOURCES:
@@ -22,8 +26,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   p2.OAuth2: a8f96ecad6a46189b9b193691fea401139e43491
+  R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
+  R.swift.Library: 0869d8d546517aa79db078fd8262724391a38db8
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
 
-PODFILE CHECKSUM: 70b125c1062aaaa04ec9770c79f8cdc6732543a3
+PODFILE CHECKSUM: 5f8602bf5aca27724d8bdf3e81aabfcdbd27e136
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.0.1

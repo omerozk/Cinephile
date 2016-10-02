@@ -11,6 +11,11 @@ import Alamofire
 import SwiftyJSON
 
 extension APIClient {
+
+    func authorizeUser(successBlock: ((Void) -> Void)? = nil,
+                       failureBlock: ((_ error: NSError) -> Void)? = nil) -> Void {
+        Auth2Api.sharedInstance.authorizeUser(successBlock: successBlock, failureBlock: failureBlock)
+    }
     
     @discardableResult func getUserDetails(successBlock: ((_ user: User) -> Void)? = nil,
                                            failureBlock: ((_ error: NSError) -> Void)? = nil) -> Alamofire.Request? {
@@ -38,8 +43,10 @@ extension APIClient {
         })
         Auth2Api.sharedInstance.cleanOAuth2Data()
         UserManager.sharedInstance.cleanUserData()
-        // TODO: go back to login
-        
+
+        // go back to root controller which is login screen
+        AppDelegate.backToLoginVC()
+
         return request
     }
 
